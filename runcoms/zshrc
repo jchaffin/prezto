@@ -6,8 +6,28 @@
 #
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [[ -s "${ZPREZTODIR}/init.zsh" ]]; then
+  source "${ZPREZTODIR}/init.zsh"
 fi
 
 # Customize to your needs...
+alias apm='apm-beta'
+alias atom='atom-beta'
+alias numFiles='echo $(ls -1 | wc -l)'
+alias oct='stat -f %Mp%Lp'
+alias openPorts='lsof -Pan -i tcp -i udp'
+alias sbb="subl ~/dotfiles/bash/"
+alias szz="subl ~/.{zprofile,zshrc,zlogout,zshenv,zlogin,zpreztorc}"
+alias rs="reset && exec $SHELL"
+# Zshmarks
+alias g="jump"
+alias s="bookmark"
+alias p="showmarks"
+
+if which jenv > /dev/null; then
+  eval "$(jenv init -)";
+fi
+
+
+autoload -U promptinit; promptinit
+prompt pure

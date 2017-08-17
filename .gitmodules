@@ -25,3 +25,7 @@
 [submodule "modules/prompt/external/async"]
 	path = modules/prompt/external/async
 	url = https://github.com/mafredri/zsh-async.git
+[submodule "modules/zshmarks"]
+	path = modules/zshmarks
+	url = https://github.com/jocelynmallon/zshmarks.git
+
