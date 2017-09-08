@@ -46,10 +46,11 @@ zstyle ':prezto:load' pmodule \
   'docker' \
   'haskell' \
   'ocaml' \
-  'node' \
   'python' \
+  'node' \
   'rails' \
   'ruby'
+
 
 #
 # Autosuggestions
@@ -219,7 +220,7 @@ zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
-# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # Set the default session name:
 # zstyle ':prezto:module:tmux:session' name 'YOUR DEFAULT SESSION NAME'

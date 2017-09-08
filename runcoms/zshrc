@@ -17,6 +17,7 @@ alias numFiles='echo $(ls -1 | wc -l)'
 alias oct='stat -f %Mp%Lp'
 alias openPorts='lsof -Pan -i tcp -i udp'
 alias sbb="subl ~/dotfiles/bash/"
+alias l='logout'
 alias szz="subl ~/.{zprofile,zshrc,zlogout,zshenv,zlogin,zpreztorc}"
 alias rs="reset && exec $SHELL"
 # Zshmarks
@@ -24,10 +25,7 @@ alias g="jump"
 alias s="bookmark"
 alias p="showmarks"
 
-if which jenv > /dev/null; then
-  eval "$(jenv init -)";
-fi
-
-
 autoload -U promptinit; promptinit
 prompt pure
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
