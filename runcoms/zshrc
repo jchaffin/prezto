@@ -24,8 +24,10 @@ alias rs="reset && exec $SHELL"
 alias g="jump"
 alias s="bookmark"
 alias p="showmarks"
+alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
+alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
 autoload -U promptinit; promptinit
 prompt pure
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
