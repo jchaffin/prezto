@@ -8,8 +8,13 @@
 #
 # Zsh
 #
-# highly unlikely to work.
 export ZPREZTODIR=$HOME/dotfiles/prezto
+
+#
+# Eclipse
+#
+export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
+
 #
 # Browser
 #
@@ -17,6 +22,7 @@ export ZPREZTODIR=$HOME/dotfiles/prezto
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
+
 
 #
 # Editors
