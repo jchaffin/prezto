@@ -34,7 +34,7 @@ export PAGER='less'
 
 # See spacemacs gtags layer
 # https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btags/gtags
-export GTAGSLABEL=pygments
+export GTAGSLABEL=ctags
 
 # Help `pkg-config' find essential libraries
 # https://github.com/politza/pdf-tools
@@ -64,6 +64,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  ~/.bin
   $path
 )
 
