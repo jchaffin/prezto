@@ -23,6 +23,7 @@ alias rs="reset && exec $SHELL"
 # Zshmarks
 alias g="jump"
 alias s="bookmark"
+alias d="deletemark"
 alias p="showmarks"
 alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
