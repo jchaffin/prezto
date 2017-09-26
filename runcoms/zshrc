@@ -18,7 +18,7 @@ alias oct='stat -f %Mp%Lp'
 alias openPorts='lsof -Pan -i tcp -i udp'
 alias sbb="subl ~/dotfiles/bash/"
 alias l='logout'
-alias szz="subl ~/.{zprofile,zshrc,zlogout,zshenv,zlogin,zpreztorc}"
+alias szz="subl -n ~/.{zprofile,zshrc,zlogout,zshenv,zlogin,zpreztorc}"
 alias rs="reset && exec $SHELL"
 # Zshmarks
 alias g="jump"
