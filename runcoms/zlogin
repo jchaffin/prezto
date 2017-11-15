@@ -1,3 +1,4 @@
+# -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
 # Executes commands at login post-zshrc.
 #

@@ -1,3 +1,4 @@
+# -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
 # Executes commands at the start of an interactive session.
 #
@@ -18,7 +19,7 @@ alias oct='stat -f %Mp%Lp'
 alias openPorts='lsof -Pan -i tcp -i udp'
 alias sbb="subl ~/dotfiles/bash/"
 alias l='logout'
-alias szz="subl -n ~/.{zprofile,zshrc,zlogout,zshenv,zlogin,zpreztorc}"
+alias szz="subl -n ~/dotfiles/prezto/runcoms"
 alias rs="reset && exec $SHELL"
 # Zshmarks
 alias g="jump"
@@ -27,6 +28,7 @@ alias d="deletemark"
 alias p="showmarks"
 alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
+alias ekill="ps aux | pgrep -i emacs | xargs kill"
 
 autoload -U promptinit; promptinit
 prompt pure

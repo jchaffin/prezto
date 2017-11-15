@@ -1,4 +1,4 @@
-#
+# -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 # Executes commands at login pre-zshrc.
 #
 # Authors:
@@ -28,7 +28,7 @@ fi
 # Editors
 #
 
-export EDITOR='/usr/local/Cellar/emacs-plus/25.2_1/bin/emacsclient -c &'
+export EDITOR='/usr/local/opt/emacs-plus/bin/emacsclient -c --alternate-editor subl'
 export VISUAL='subl'
 export PAGER='less'
 
