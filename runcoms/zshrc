@@ -30,8 +30,6 @@ alias szz="subl -n ~/dotfiles/prezto/runcoms"
 alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
-# While using railwayscat/emacs-macport
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 alias ekill="ps aux | pgrep -i emacs | xargs kill"
 
 # Zshmarks
