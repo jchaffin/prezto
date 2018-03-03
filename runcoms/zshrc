@@ -22,7 +22,7 @@ alias establishedPorts='lsof -i | grep ESTABLISHED'
 alias wifiOff='networksetup -setairportpower en0 off'
 alias wifiOn='networksetup -setairportpower en0 on'
 # Session
-alias l='logout'
+# alias l='logout'
 alias rs="reset && exec $SHELL"
 # User
 alias sbb="subl ~/dotfiles/bash/"

@@ -41,6 +41,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'tmux' \
   'syntax-highlighting' \
+  'gpg' \
   'emacs' \
   'editor' \
   'pacman' \

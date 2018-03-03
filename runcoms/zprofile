@@ -28,7 +28,7 @@ fi
 # Editors
 #
 
-export EDITOR='/usr/local/opt/emacs-plus/bin/emacsclient -c --alternate-editor subl'
+export EDITOR='emacs'
 export VISUAL='subl'
 export PAGER='less'
 
@@ -38,7 +38,12 @@ export GTAGSLABEL=ctags
 
 # Help `pkg-config' find essential libraries
 # https://github.com/politza/pdf-tools
-export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+# export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig\
+
+#
+# GPG
+#
+export GPG_TTY=$(tty)
 
 
 #
@@ -64,7 +69,6 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  ~/.bin
   $path
 )
 
