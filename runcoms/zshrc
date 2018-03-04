@@ -21,8 +21,8 @@ alias openPorts='lsof -Pan -i tcp -i udp'
 alias establishedPorts='lsof -i | grep ESTABLISHED'
 alias wifiOff='networksetup -setairportpower en0 off'
 alias wifiOn='networksetup -setairportpower en0 on'
+alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport'
 # Session
-# alias l='logout'
 alias rs="reset && exec $SHELL"
 # User
 alias sbb="subl ~/dotfiles/bash/"
