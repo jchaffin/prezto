@@ -31,6 +31,7 @@ alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 alias ekill="ps aux | pgrep -i emacs | xargs kill"
 
+
 # Zshmarks
 alias g="jump"
 alias s="bookmark"
@@ -42,3 +43,4 @@ autoload -U promptinit; promptinit
 prompt pure
 
 
+# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
