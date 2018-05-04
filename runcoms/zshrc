@@ -41,6 +41,3 @@ alias p="showmarks"
 # Prompt
 autoload -U promptinit; promptinit
 prompt pure
-
-
-# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
