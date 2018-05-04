@@ -12,10 +12,10 @@ of a previously entered command and Zsh suggests commands as you type based on
 history and completions.
 
 If this module is used in conjunction with the *syntax-highlighting* module,
-the *syntax-highlighting* module must be loaded **after** this module.
+this module must be loaded **after** the *syntax-highlighting* module.
 
 If this module is used in conjunction with the *history-substring-search*
-module, the *history-substring-search* module must be loaded **after** this
+module, this module must be loaded **after** the *history-substring-search*
 module.
 
 Contributors
@@ -45,6 +45,14 @@ To set the query found color, add the following line to *zpreztorc*:
 ```sh
 zstyle ':prezto:module:autosuggestions:color' found ''
 ```
+
+Troubleshooting
+---------------
+
+### Autosuggestions from previous sessions don't show up
+
+For autosuggestions from previous shell sessions to work, please make sure you
+also have the `history` module enabled.
 
 Authors
 -------
