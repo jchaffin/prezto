@@ -14,7 +14,6 @@ fi
 
 # File Info
 alias numFiles='echo $(ls -1 | wc -l)'
-alias oct='stat -f %Mp%Lp'
 # System
 alias battery="pmset -g batt"
 # Network
@@ -23,15 +22,14 @@ alias establishedPorts='lsof -i | grep ESTABLISHED'
 alias wifiOff='networksetup -setairportpower en0 off'
 alias wifiOn='networksetup -setairportpower en0 on'
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport'
-# Session
+# Term Session
 alias rs="reset && exec $SHELL"
 # User
-alias sbb="subl ~/dotfiles/bash/"
-alias szz="subl -n ~/dotfiles/prezto/runcoms"
-alias eclim="/Applications/Eclipse.app/Contents/Eclipse/eclim"
-alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
+alias sbb="subl $HOME/dotfiles/bash/"
+alias szz="subl -n $HOME/dotfiles/prezto/runcoms"
 alias ekill="ps aux | pgrep -i emacs | xargs kill"
-
+alias wakpb="cat $HOME/.wakatime.cfg | tail -n 1 | \
+  gsed -E \"s/^(.*)?[ \t]=[ \t]//\" | pbcopy"
 # Zshmarks
 alias g="jump"
 alias s="bookmark"
