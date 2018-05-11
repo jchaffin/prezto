@@ -3,6 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
+#.  Jacob Chaffin <jchaffin@ucla.edu>
 #
 
 #
@@ -28,17 +29,13 @@ fi
 # Editors
 #
 
-export EDITOR='emacs'
+export EDITOR='subl'
 export VISUAL='subl'
 export PAGER='less'
 
 # See spacemacs gtags layer
 # https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btags/gtags
 export GTAGSLABEL=ctags
-
-# Help `pkg-config' find essential libraries
-# https://github.com/politza/pdf-tools
-# export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig\
 
 #
 # GPG
@@ -62,12 +59,13 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
+cdpath=(
+  $cdpath
+)
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/.bin
   /usr/local/{bin,sbin}
   $path
 )
@@ -89,7 +87,6 @@ fi
 
 #
 # Temporary Files
-#
 #
 # Set TMPDIR if the variable is not set/empty or the directory doesn't exist
 if [[ -z "${TMPDIR}" ]]; then
