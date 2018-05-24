@@ -35,7 +35,7 @@ export PAGER='less'
 
 # See spacemacs gtags layer
 # https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btags/gtags
-export GTAGSLABEL=ctags
+export GTAGSLABEL=pygments
 
 #
 # GPG
