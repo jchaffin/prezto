@@ -68,6 +68,7 @@ path=(
   $HOME/.bin
   /usr/local/{bin,sbin}
   $path
+  $HOME/.local/bin
 )
 
 #

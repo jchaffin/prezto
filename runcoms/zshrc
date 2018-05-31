@@ -42,6 +42,9 @@ if brew command command-not-found-init > /dev/null 2>&1; then
  eval "$(brew command-not-found-init)";
 fi
 
+# Prepend user functions to fpath
+fpath=($ZPREZTODIR/contrib/functions $fpath)
+
 # Prompt
 autoload -U promptinit; promptinit
 prompt pure
