@@ -12,29 +12,6 @@ if [[ -s "${ZPREZTODIR}/init.zsh" ]]; then
   source "${ZPREZTODIR}/init.zsh"
 fi
 
-# File Info
-alias numFiles='echo $(ls -1 | wc -l)'
-# System
-alias battery="pmset -g batt"
-# Network
-alias openPorts='lsof -Pan -i tcp -i udp'
-alias establishedPorts='lsof -i | grep ESTABLISHED'
-alias wifiOff='networksetup -setairportpower en0 off'
-alias wifiOn='networksetup -setairportpower en0 on'
-alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport'
-# Term Session
-alias rs="reset && exec $SHELL"
-# User
-alias sbb="subl $HOME/dotfiles/bash/"
-alias szz="subl -n $HOME/dotfiles/prezto/runcoms"
-alias ekill="ps aux | pgrep -i emacs | xargs kill"
-alias wakpb="cat $HOME/.wakatime.cfg | tail -n 1 | \
-  gsed -E \"s/^(.*)?[ \t]=[ \t]//\" | pbcopy"
-# Zshmarks
-alias g="jump"
-alias s="bookmark"
-alias d="deletemark"
-alias bl="showmarks"
 
 # Command Not Found
 # https://github.com/Homebrew/homebrew-command-not-found#install
