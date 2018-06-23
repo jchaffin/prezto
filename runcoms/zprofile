@@ -17,6 +17,13 @@ export ZPREZTODIR=$HOME/dotfiles/prezto
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
 
 #
+# Node.js
+#
+# Disable warnings
+# https://github.com/nodejs/node/pull/10918
+export NODE_NO_WARNINGS='1'
+
+#
 # Browser
 #
 
