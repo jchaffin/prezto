@@ -73,7 +73,7 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.bin
-  /usr/local/{bin,sbin}
+  /usr/local/{opt/llvm@4/bin,bin,sbin}
   $path
   $HOME/.local/bin
 )
@@ -104,5 +104,3 @@ fi
 if [[ ! -d "${TMPDIR}" ]]; then
   mkdir -m 700 "${TMPDIR}"
 fi
-
-
