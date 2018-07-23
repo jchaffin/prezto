@@ -23,7 +23,9 @@ fi
 alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
+
 alias bl="showmarks"
+
 
 if [[ "$OSTYPE" == darwin* ]] ; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
@@ -37,3 +39,9 @@ fpath=($ZPREZTODIR/contrib/functions $fpath)
 # Prompt
 autoload -U promptinit; promptinit
 prompt pure
+
+
+# begin s3-demo completion
+. <(s3-demo --completion)
+# end s3-demo completion
+
