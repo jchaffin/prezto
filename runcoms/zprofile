@@ -73,7 +73,7 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.bin
-  /usr/local/{opt/llvm@4/bin,bin,sbin}
+  /usr/local/{opt/llvm/bin,bin,sbin}
   $path
   $HOME/.local/bin
 )
