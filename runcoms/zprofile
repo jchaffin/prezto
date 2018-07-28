@@ -73,11 +73,15 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.bin
-  /usr/local/{opt/llvm/bin,bin,sbin}
+  /usr/local/{bin,sbin}
   $path
   $HOME/.local/bin
 )
 
+
+if (( $+commands[brew] )) && [[ -d "$(brew --prefix llvm 2> /dev/null)" ]] ; then
+  path=( "$(brew --prefix llvm)/bin" $path)
+fi
 #
 # Less
 #
