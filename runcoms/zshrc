@@ -12,7 +12,6 @@ if [[ -s "${ZPREZTODIR}/init.zsh" ]]; then
   source "${ZPREZTODIR}/init.zsh"
 fi
 
-
 # Command Not Found
 # https://github.com/Homebrew/homebrew-command-not-found#install
 if brew command command-not-found-init > /dev/null 2>&1; then
@@ -23,20 +22,23 @@ fi
 alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
-
 alias bl="showmarks"
 
-
+# Google Cloud
 if [[ "$OSTYPE" == darwin* ]] ; then
-  # Google Cloud
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcloud/gcloud-commander-credentials.json"
 fi
 
+# z
+# https://github.com/rupa/z
+if (( $+commands[brew] )) && [[ -d "$(brew --prefix z 2> /dev/null)" ]] ; then
+  . `brew --prefix`/etc/profile.d/z.sh
+fi
+
 # Prepend user functions to fpath
 fpath=($ZPREZTODIR/contrib/functions $fpath)
-
 
 # Prompt
 autoload -U promptinit; promptinit
