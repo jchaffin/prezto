@@ -1,8 +1,9 @@
-#
+# -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 # Executes commands at login pre-zshrc.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
+#  Jacob Chaffin <jchaffin@ucla.edu>
 #
 
 #
@@ -14,6 +15,13 @@ export ZPREZTODIR=$HOME/dotfiles/prezto
 # Eclipse
 #
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
+
+#
+# Node.js
+#
+# Disable warnings
+# https://github.com/nodejs/node/pull/10918
+export NODE_NO_WARNINGS='1'
 
 #
 # Browser
@@ -28,17 +36,18 @@ fi
 # Editors
 #
 
-export EDITOR='/usr/local/Cellar/emacs-plus/25.2_1/bin/emacsclient -c &'
+export EDITOR='subl'
 export VISUAL='subl'
 export PAGER='less'
 
 # See spacemacs gtags layer
 # https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btags/gtags
-export GTAGSLABEL=ctags
+export GTAGSLABEL=pygments
 
-# Help `pkg-config' find essential libraries
-# https://github.com/politza/pdf-tools
-export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+#
+# GPG
+#
+export GPG_TTY=$(tty)
 
 
 #
@@ -57,16 +66,25 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
+cdpath=(
+  $cdpath
+)
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/.bin
   /usr/local/{bin,sbin}
-  ~/.bin
   $path
+  $HOME/.local/bin
 )
+
+# LLVM Custom Toolchain
+if (( $+commands[brew] )) && [[ -d "$(brew --prefix llvm 2> /dev/null)" ]] ; then
+  path=( "$(brew --prefix llvm)/bin" $path )
+  export CC="$(brew --prefix llvm)/bin/clang"
+  export CXX="${CC}++"
+  export TOOLCHAINS=/Applications/Xcode.app/Contents/Developer/Toolchains/LLVM6.0.1.xctoolchain
+fi
 
 #
 # Less
@@ -86,7 +104,6 @@ fi
 #
 # Temporary Files
 #
-#
 # Set TMPDIR if the variable is not set/empty or the directory doesn't exist
 if [[ -z "${TMPDIR}" ]]; then
   export TMPDIR="/tmp/zsh-${UID}"
@@ -95,5 +112,3 @@ fi
 if [[ ! -d "${TMPDIR}" ]]; then
   mkdir -m 700 "${TMPDIR}"
 fi
-
-
