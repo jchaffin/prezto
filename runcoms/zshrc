@@ -37,6 +37,10 @@ if (( $+commands[brew] )) && [[ -d "$(brew --prefix z 2> /dev/null)" ]] ; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
 
+if [[ -d "$HOME/.tmp" ]] ; then
+  export TMPDIR="$HOME/.tmp"
+fi
+
 # Prepend user functions to fpath
 fpath=($ZPREZTODIR/contrib/functions $fpath)
 
