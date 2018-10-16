@@ -36,7 +36,8 @@ fi
 # Editors
 #
 
-export EDITOR='subl'
+export EDITOR=subl
+export ALTERNATE_EDITOR=""
 export VISUAL='subl'
 export PAGER='less'
 
