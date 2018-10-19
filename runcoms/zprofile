@@ -37,7 +37,7 @@ fi
 #
 
 export EDITOR=subl
-export ALTERNATE_EDITOR=""
+# export ALTERNATE_EDITOR=""
 export VISUAL='subl'
 export PAGER='less'
 
@@ -78,14 +78,6 @@ path=(
   $path
   $HOME/.local/bin
 )
-
-# LLVM Custom Toolchain
-if (( $+commands[brew] )) && [[ -d "$(brew --prefix llvm 2> /dev/null)" ]] ; then
-  path=( "$(brew --prefix llvm)/bin" $path )
-  export CC="$(brew --prefix llvm)/bin/clang"
-  export CXX="${CC}++"
-  export TOOLCHAINS=/Applications/Xcode.app/Contents/Developer/Toolchains/LLVM6.0.1.xctoolchain
-fi
 
 #
 # Less
