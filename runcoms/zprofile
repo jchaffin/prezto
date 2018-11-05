@@ -16,6 +16,9 @@ export ZPREZTODIR=$HOME/dotfiles/prezto
 #
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
 
+# Perl 5
+export PERL5LIB="/usr/local/lib/perl5/site_perl":$PERL5LIB
+
 #
 # Node.js
 #
