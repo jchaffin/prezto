@@ -12,6 +12,10 @@
 export ZPREZTODIR=$HOME/dotfiles/prezto
 
 #
+# TMPDIR
+#
+export TMPDIR="/tmp"
+
 # Eclipse
 #
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
