@@ -64,6 +64,7 @@ zstyle ':prezto:load' pmodule \
   'perl' \
   'node' \
   'user' \
+  'google-cloud' \
   'rails' \
   'ruby'
 
