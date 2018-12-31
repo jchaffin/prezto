@@ -29,11 +29,3 @@ alias bl="showmarks"
 if (( $+commands[brew] )) && [[ -d "$(brew --prefix z 2> /dev/null)" ]] ; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
-
-# Prepend user functions to fpath
-fpath=($ZPREZTODIR/contrib/functions $fpath)
-
-# Prompt
-autoload -U promptinit; promptinit
-prompt pure
-

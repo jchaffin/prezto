@@ -85,6 +85,8 @@ path=(
   $HOME/.local/bin
 )
 
+# Prepend user functions to fpath
+fpath=($ZPREZTODIR/contrib/functions $fpath)
 #
 # Less
 #
