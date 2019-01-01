@@ -146,7 +146,13 @@ fi
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'spaceship'
+if [[ -n "${INSIDE_EMACS}" ]] ; then
+  # use different prompt theme in Emacs terminal emulators
+  zstyle ':prezto:module:prompt' theme 'spaceship'
+else
+  zstyle ':prezto:module:prompt' theme 'pure'
+fi
+
 # Set the working directory prompt display length.
 # By default, it is set to 'short'.
 # Set it to 'long' (without '~' expansion)
@@ -233,7 +239,6 @@ else
     # Set the terminal multiplexer title format.
     zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 fi
-
 
 #
 # Tmux
