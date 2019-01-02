@@ -18,7 +18,7 @@ zstyle ':prezto:*:*' case-sensitive 'yes'
 zstyle ':prezto:*:*' color 'yes'
 
 # Add additional directories to load prezto modules from
-zstyle ':prezto:load' pmodule-dirs $HOME/dotfiles/prezto-user
+zstyle ':prezto:load' pmodule-dirs $(dirname ${ZPREZTODIR})/prezto-personal
 
 # Set the Zsh modules to load (man zshmodules).
 zstyle ':prezto:load' zmodule 'attr' 'stat'
@@ -32,46 +32,42 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'emacs' \
   'history' \
-  'docker' \
   'directory' \
   'spectrum' \
+  'gnu-utility' \
   'utility' \
+  'ssh' \
   'completion' \
-  'contrib-prompt' \
-  'prompt' \
-  'osx' \
+  'fasd' \
   'homebrew' \
-  'pacman' \
+  'osx' \
   'command-not-found' \
   'zshmarks' \
   'git' \
-  'tmux' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'gpg' \
-  'ssh' \
-  'emacs' \
-  'editor' \
-  'helper' \
-  'pacman' \
   'docker' \
   'haskell' \
-  'ocaml' \
-  'python' \
-  'perl' \
   'node' \
-  'user' \
+  'ocaml' \
+  'perl' \
+  'python' \
   'google-cloud' \
+  'user' \
+  'ruby' \
   'rails' \
-  'ruby'
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
+  'contrib-prompt' \
+  'prompt'
 
 #
 # Autosuggestions
 #
 
 # Set the query found color.
-zstyle ':prezto:module:autosuggestions:color' found ''
+# zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Completions
@@ -85,6 +81,7 @@ zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
 # Editor
 #
 
+zstyle ':prezto:module:editor' keymap 'emacs'
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
@@ -113,13 +110,13 @@ zstyle ':prezto:module:gnu-utility' prefix 'g'
 #
 
 # Set the query found color.
-zstyle ':prezto:module:history-substring-search:color' found ''
+# zstyle ':prezto:module:history-substring-search:color' found ''
 
 # Set the query not found color.
-zstyle ':prezto:module:history-substring-search:color' not-found ''
+# zstyle ':prezto:module:history-substring-search:color' not-found ''
 
 # Set the search globbing flags.
-zstyle ':prezto:module:history-substring-search' globbing-flags ''
+# zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
 # macOS
@@ -143,26 +140,22 @@ fi
 # Prompt
 #
 
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
 if [[ -n "${INSIDE_EMACS}" ]] ; then
-  # use different prompt theme in Emacs terminal emulators
+  # Set the prompt theme to load.
+  # Setting it to 'random' loads a random theme.
+  # Auto set to 'off' on dumb terminals.
   zstyle ':prezto:module:prompt' theme 'spaceship'
+  # Set the working directory prompt display length.
+  # By default, it is set to 'short'.
+  # Set it to 'long' (without '~' expansion)
+  # for longer or 'full' (with '~' expansion) for even longer
+  # prompt display.
+  zstyle ':prezto:module:prompt' pwd-length 'short'
 else
   zstyle ':prezto:module:prompt' theme 'pure'
+  # Display return value of shell commands
+  zstyle ':prezto:module:prompt' show-return-val 'no'
 fi
-
-# Set the working directory prompt display length.
-# By default, it is set to 'short'.
-# Set it to 'long' (without '~' expansion)
-# for longer or 'full' (with '~' expansion) for even longer
-# prompt display.
-zstyle ':prezto:module:prompt' pwd-length 'short'
-# Set the prompt to display the return code along with an indicator for
-#non-zero return codes. This is not supported by all prompts.
-zstyle ':prezto:module:prompt' show-return-val 'yes'
-
 
 
 #
@@ -170,10 +163,10 @@ zstyle ':prezto:module:prompt' show-return-val 'yes'
 #
 
 # Auto switch the Python virtualenv on directory change.
-zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
+# zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
-zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+# zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 
 
 #
@@ -227,17 +220,17 @@ zstyle ':prezto:module:syntax-highlighting' pattern \
 #
 # Terminal
 #
-if [[ -n ${EMACS} ]]; then
-    zstyle ':prezto:module:terminal' auto-title 'no'
+if [[ -n "${INSIDE_EMACS}" ]]; then
+  zstyle ':prezto:module:terminal' auto-title 'no'
 else
-    # Auto set the tab and window titles.
-    zstyle ':prezto:module:terminal' auto-title 'yes'
-    # Set the window title format.
-    zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
-    # Set the tab title format.
-    zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-    # Set the terminal multiplexer title format.
-    zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
+  # Auto set the tab and window titles.
+  zstyle ':prezto:module:terminal' auto-title 'yes'
+  # Set the window title format.
+  zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+  # Set the tab title format.
+  zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+  # Set the terminal multiplexer title format.
+  zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 fi
 
 #

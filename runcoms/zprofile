@@ -38,7 +38,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-
 #
 # Editors
 #
@@ -84,9 +83,10 @@ path=(
   $path
   $HOME/.local/bin
 )
+# if [[ -f "/usr/local/share/zsh-completions" ]] ; then
+#   fpath=(/usr/local/share/zsh-completions $fpath)
+# fi
 
-# Prepend user functions to fpath
-fpath=($ZPREZTODIR/contrib/functions $fpath)
 #
 # Less
 #
