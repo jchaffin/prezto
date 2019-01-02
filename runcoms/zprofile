@@ -83,9 +83,10 @@ path=(
   $path
   $HOME/.local/bin
 )
-# if [[ -f "/usr/local/share/zsh-completions" ]] ; then
-#   fpath=(/usr/local/share/zsh-completions $fpath)
-# fi
+
+if [[ "$OSTYPE" == darwin* ]] ; then
+  fpath=($HOME/dotfiles/zsh-completions $fpath)
+fi
 
 #
 # Less
