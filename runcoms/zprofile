@@ -9,7 +9,7 @@
 #
 # Zsh
 #
-export ZPREZTODIR=$HOME/dotfiles/prezto
+export ZPREZTODIR=$HOME/dotfiles/zsh/prezto
 
 #
 # TMPDIR
