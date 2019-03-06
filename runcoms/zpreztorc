@@ -53,6 +53,7 @@ zstyle ':prezto:load' pmodule \
   'perl' \
   'python' \
   'google-cloud' \
+  'aliases' \
   'user' \
   'ruby' \
   'rails' \
