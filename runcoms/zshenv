@@ -13,5 +13,7 @@ fi
 
 # pyenv-virtualenvwrapper
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
-export WORKON_HOME="~/.virtualenvs"
-export PROJECT_HOME="~/Developer/worskpace"
+export WORKON_HOME="$HOME/.virtualenvs"
+export VIRTUALENVWRAPPER_PYTHON="$HOME/.pyenv/shims/python"
+export PROJECT_HOME="$HOME/Developer"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"

@@ -78,11 +78,14 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ${$( (( $+commands[brew] )) && print -l "$(brew --prefix llvm)/bin" )}
   $HOME/.bin
-  /usr/local/{bin,sbin}
-  $path
   $HOME/.local/bin
+  /usr/local/{bin,sbin}
+  /usr/local/opt/texinfo/bin
+  $path
 )
+
 
 if [[ "$OSTYPE" == darwin* ]] ; then
   fpath=($HOME/dotfiles/zsh-completions $fpath)

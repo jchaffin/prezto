@@ -29,3 +29,9 @@ alias bl="showmarks"
 if (( $+commands[brew] )) && [[ -d "$(brew --prefix z 2> /dev/null)" ]] ; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
+
+# pyenv
+# https://github.com/pyenv/pyenv/issues/106
+if (( $+commands[pyenv] )) ; then
+  alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
+fi
