@@ -88,7 +88,7 @@ path=(
 
 
 if [[ "$OSTYPE" == darwin* ]] ; then
-  fpath=($HOME/dotfiles/zsh-completions $fpath)
+  fpath=($(dirname ${ZPREZTODIR})/extra/macos-completions $fpath)
 fi
 
 #

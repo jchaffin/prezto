@@ -54,6 +54,7 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'google-cloud' \
   'aliases' \
+  'macos-completions' \
   'user' \
   'ruby' \
   'rails' \
@@ -69,7 +70,6 @@ zstyle ':prezto:load' pmodule \
 
 # Set the query found color.
 # zstyle ':prezto:module:autosuggestions:color' found ''
-
 #
 # Completions
 #
