@@ -64,6 +64,10 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
+if (( $#commands[go] )); then
+  GOPATH="$HOME/go"
+fi
+
 #
 # Paths
 #
@@ -79,8 +83,7 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   ${$( (( $+commands[brew] )) && print -l "$(brew --prefix llvm)/bin" )}
-  $HOME/.bin
-  $HOME/.local/bin
+  $HOME/{.local/bin,.bin,go/bin}
   /usr/local/{bin,sbin}
   /usr/local/opt/texinfo/bin
   $path
