@@ -1,10 +1,8 @@
-Emacs
-=====
+# Emacs
 
 Enables Emacs dependency management.
 
-Dependency management
----------------------
+## Dependency management
 
 [Cask][1] installs and manages Emacs packages for Emacs package development
 and Emacs configuration.
@@ -14,15 +12,14 @@ Aliases
 
 ### Cask
 
-  - `cai` installs dependencies.
-  - `cau` updates dependencies.
-  - `caI` initializes the current directory for dependency management.
-  - `cae` executes a command which correct dependencies.
+- `cai` installs dependencies.
+- `cau` updates dependencies.
+- `caI` initializes the current directory for dependency management.
+- `cae` executes a command which correct dependencies.
 
-Authors
--------
+## Authors
 
-*The authors of this module should be contacted via the [issue tracker][2].*
+_The authors of this module should be contacted via the [issue tracker][2]._
 
   - [Sebastian Wiesner](https://github.com/lunaryorn)
   - [Jacob Chaffin](https://github.com/jchaffin)
